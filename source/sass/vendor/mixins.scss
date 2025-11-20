@@ -1,0 +1,67 @@
+@mixin background-image($url, $position, $repeat, $size) {
+  background: url($url) $repeat $position;
+  background-size: $size;
+}
+
+@mixin font($weight: 400, $size: 14px, $height: 20px, $style: normal) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  font-style: $style;
+}
+
+@mixin flex($direction:row, $justify:flex-start, $align:stretch, $wrap: no-wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $direction $wrap;
+}
+
+@mixin mask-image($url, $mask-size:contain, $mask-repeat:no-repeat, $mask-position: center) {
+  mask-image: url($url);
+  mask-size: $mask-size;
+  mask-repeat: $mask-repeat;
+  mask-position: $mask-position;
+}
+
+@mixin list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin button-reset() {
+  border: 0 transparent;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+@mixin link-reset($color) {
+  color: $color;
+  text-decoration: none;
+}
+
+
+@mixin position-absolute-center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin before-title-section($content, $top: -14px) {
+  content: $content;
+  top: $top;
+}
+
+@mixin tablet {
+  @media (min-width: $min-tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $min-desktop-width) {
+    @content;
+  }
+}

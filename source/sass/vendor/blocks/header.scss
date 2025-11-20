@@ -1,0 +1,49 @@
+.header {
+  @include font(600, 14px, 14px);
+  @include flex(row, space-between, center, wrap);
+  background-color: $secondary-color;
+  color: $white-color;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header__menu-button {
+  @include button-reset();
+  @include desktop {
+    display: none;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.header__nav {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.header__nav-list {
+  @include list-reset();
+}
+
+.header__nav-link {
+  @include font(400, 16px, 16px);
+  text-decoration: none;
+  color: $white-color;
+}
+
+.header__logo {
+  margin-left: auto;
+  margin-bottom: 14px;
+}
+
+.header__phone {
+  @include link-reset($white-color);
+  @include font(600, 14px, 14px);
+  margin-left: auto;
+}

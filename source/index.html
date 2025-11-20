@@ -5,26 +5,185 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lifetour</title>
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
   <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" width="410" height="400" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
-    <div data-test="hero">hero</div>
-    <div data-test="tours">tours</div>
-    <div data-test="training">training</div>
-    <div data-test="about">about</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="adv">adv</div>
-    <div data-test="gallery">gallery</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+    <header class="header container" data-test="header">
+      <button class="header__menu-button js-toggle-button" type="button">
+        <span class="visually-hidden">Кнопка открытия / закрытия мобильного меню</span>
+        <svg>
+          <use href="/__spritemap#sprite-menu"></use>
+        </svg>
+      </button>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Туры</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Обучение</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">О нас</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Отзывы</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Фотографии</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__logo" href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="/__spritemap#sprite-logotype-view" width="142" height="42" alt="Lifetour">
+      </a>
+      <a href="tel:+8 800 000-00-00" class="header__phone">8 800 000-00-00</a>
+    </header>
+    <main>
+      <section class="hero" data-test="hero">
+        <h1 class="hero__title visually-hidden">Lifetour.</h1>
+        <div class="hero__slider slider swiper">
+          <ul class="slider__list swiper-wrapper">
+            <li class="slider__list-item slide active swiper-slide">
+              <div class="slide__image">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="./img/hero_back_desktop@1x.webp 1x, ./img/hero_back_desktop@2x.webp 2x"
+                    width="100%"
+                    height="800">
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="./img/hero_back_tablet@1x.webp 1x, ./img/hero_back_tablet@2x.webp 2x"
+                    width="100%"
+                    height="1034">
+                  <source
+                    type="image/webp"
+                    srcset="./img/hero_back_mobile@1x.webp 1x, ./img/hero_back_mobile@2x.webp 2x"
+                    width="100%"
+                    height="568">
+                  <source
+                    type="image/png"
+                    media="(min-width: 1440px)"
+                    srcset="./img/hero_back_desktop@1x.png 1x, ./img/hero_back_desktop@2x.png 2x"
+                    width="100%"
+                    height="800">
+                  <source
+                    type="image/png"
+                    media="(min-width: 768px)"
+                    srcset="./img/hero_back_tablet@1x.png 1x, ./img/hero_back_tablet@2x.png 2x"
+                    width="100%"
+                    height="1034">
+                  <img
+                    src="./img/hero_back_mobile@1x.png"
+                    srcset="./img/hero_back_mobile@2x.png 2x"
+                    alt="Захватывающие вершины Кавказа."
+                    width="100%"
+                    height="568">
+                </picture>
+              </div>
+              <div class="slide__content">
+                <h2>Захватывающие вершины Кавказа</h2>
+                <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+                <button class="slide__button button" type="button">Смотреть тур</button>
+<!--                <div class="slide__pagination swiper-pagination">-->
+<!--                  <span class="dot active" data-slide="0"></span>-->
+<!--                  <span class="dot" data-slide="1"></span>-->
+<!--                  <span class="dot" data-slide="2"></span>-->
+<!--                </div>-->
+              </div>
+            </li>
+            <li class="slider__list-item slide active swiper-slide">
+              <div class="slide__image">
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="./img/hero_back_desktop@1x.webp 1x, ./img/hero_back_desktop@2x.webp 2x"
+                    width="100%"
+                    height="800">
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="./img/hero_back_tablet@1x.webp 1x, ./img/hero_back_tablet@2x.webp 2x"
+                    width="100%"
+                    height="1034">
+                  <source
+                    type="image/webp"
+                    srcset="./img/hero_back_mobile@1x.webp 1x, ./img/hero_back_mobile@2x.webp 2x"
+                    width="100%"
+                    height="568">
+                  <source
+                    type="image/png"
+                    media="(min-width: 1440px)"
+                    srcset="./img/hero_back_desktop@1x.png 1x, ./img/hero_back_desktop@2x.png 2x"
+                    width="100%"
+                    height="800">
+                  <source
+                    type="image/png"
+                    media="(min-width: 768px)"
+                    srcset="./img/hero_back_tablet@1x.png 1x, ./img/hero_back_tablet@2x.png 2x"
+                    width="100%"
+                    height="1034">
+                  <img
+                    src="./img/hero_back_mobile@1x.png"
+                    srcset="./img/hero_back_mobile@2x.png 2x"
+                    alt="Захватывающие вершины Кавказа."
+                    width="100%"
+                    height="568">
+                </picture>
+              </div>
+              <div class="slide__content">
+                <h2>Захватывающие вершины Кавказа</h2>
+                <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+                <button class="slide__button button" type="button">НЕ Смотреть тур</button>
+<!--                <div class="slide__pagination swiper-pagination">-->
+<!--                  <span class="dot active" data-slide="0"></span>-->
+<!--                  <span class="dot" data-slide="1"></span>-->
+<!--                  <span class="dot" data-slide="2"></span>-->
+<!--                </div>-->
+              </div>
+            </li>
+          </ul>
+          <div class="slide__pagination swiper-pagination">
+<!--            <span class="dot active" data-slide="0"></span>-->
+<!--            <span class="dot" data-slide="1"></span>-->
+<!--            <span class="dot" data-slide="2"></span>-->
+          </div>
+        </div>
+      </section>
+      <section class="section tours container" data-test="tours">
+        <h2>Ближайшие туры</h2>
+      </section>
+      <section class="section training container" data-test="training">
+        <h2>training</h2>
+      </section>
+      <section class="section about container" data-test="about">
+        <h2>about</h2>
+      </section>
+      <section class="section reviews container" data-test="reviews">
+        <h2>reviews</h2>
+      </section>
+      <section class="section adv container" data-test="adv">
+        <h2>adv</h2>
+      </section>
+      <section class="section gallery container" data-test="gallery">
+        <h2>gallery</h2>
+      </section>
+      <section class="form container" data-test="form">
+        <h2>form</h2>
+      </section>
+    </main>
+    <section class="footer container" data-test="footer">
+      <h2>footer</h2>
+    </section>
     <script type="module" src="js/main.js"></script>
   </body>
 

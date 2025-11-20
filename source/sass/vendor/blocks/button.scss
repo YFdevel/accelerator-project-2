@@ -1,0 +1,10 @@
+.button {
+  @include button-reset();
+  @include font(500, 16px, 16px);
+
+  background-color: $secondary-color;
+  color: $white-color;
+  max-width: 180px;
+  padding: 20px;
+  cursor: pointer;
+}

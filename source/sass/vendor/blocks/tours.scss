@@ -1,0 +1,12 @@
+.tours {
+  padding-top: 36px;
+  padding-bottom: 20px;
+}
+
+.tours h2 {
+  margin-bottom: 42px;
+}
+
+.tours h2::before {
+  @include before-title-section("Ближайшие туры", -14px);
+}
