@@ -1,0 +1,5 @@
+.hero__slider-list,
+.tours__slider-list, {
+  @include list-reset();
+  position: relative;
+}

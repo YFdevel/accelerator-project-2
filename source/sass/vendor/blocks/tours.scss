@@ -3,10 +3,123 @@
   padding-bottom: 20px;
 }
 
-.tours h2 {
+.tours__container {
+  position: relative;
+}
+
+.tours__slider{
+  margin-bottom: 53px;
+}
+
+.tours  h2:first-child {
   margin-bottom: 42px;
 }
 
-.tours h2::before {
+.tours  h2:first-child::before {
   @include before-title-section("Ближайшие туры", -14px);
 }
+
+.tours__button {
+  @include link-reset($primary-color);
+  @include font(700, 16px, 16px);
+  text-transform: uppercase;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.tours__button::after {
+  content: "";
+  display: inline-block;
+  margin-left: 12px;
+  background: $primary-color;
+  width: 12px;
+  height: 12px;
+
+  @include mask-image("../../__spritemap#sprite-right-view",contain,no-repeat, right);
+}
+
+.tours__swiper-buttons {
+  @include flex(row, flex-end, center, wrap);
+  position: absolute;
+  right: 20px;
+  top: 0;
+  z-index: 2;
+}
+
+.tours .swiper-button-next,
+.tours .swiper-button-prev {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  background-image: none;
+  font-size: 0;
+}
+
+//.tours .swiper-button-disabled {
+//  opacity: 0.35;
+//}
+
+.tours .tours__swiper-button-prev,
+.tours .tours__swiper-button-next {
+  width: 37px;
+  height: 35px;
+  background-color: $btn-disabled-color;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tours .tours__swiper-button-next {
+  background-color: $secondary-color;
+  margin-left: 4px;
+}
+
+.tours .swiper-button-prev::after,
+.tours .swiper-button-next::after {
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  content: '' !important;
+  display: none;
+}
+
+.tours .tours__swiper-button-prev::before,
+.tours .tours__swiper-button-next::before {
+  @include flex(row, center, center, wrap);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: $white-color;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.tours .tours__swiper-button-prev::before {
+  @include mask-image("../../__spritemap#sprite-prev-view",20px 5px,no-repeat, center);
+}
+
+.tours .tours__swiper-button-next::before {
+  @include mask-image("../../__spritemap#sprite-next-view",20px 5px,no-repeat, center);
+}
+
+
+//.tours .swiper-button-prev:hover,
+//.tours .swiper-button-next:hover {
+//  background-color: #007bff;
+//  transform: scale(1.1);
+//}
+
+//.tours .swiper-button-prev:hover::after,
+//.tours .swiper-button-next:hover::after {
+//  color: white;
+//}
+
+
+
+
+

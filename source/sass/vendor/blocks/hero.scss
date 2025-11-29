@@ -16,3 +16,40 @@
 .hero__slider {
   overflow: hidden;
 }
+
+.hero .swiper-pagination.hero__pagination {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.hero .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white-color;
+  background: transparent;
+  transition: all 0.3s ease;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.hero .swiper-pagination-bullet-active {
+  background: $white-color;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.hero .swiper-pagination-bullets {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hero .swiper-pagination-bullet {
+  flex-shrink: 0;
+}
+
+
+

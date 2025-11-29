@@ -1,0 +1,100 @@
+.tours-slide {
+  position: relative;
+}
+
+.tours-slide__image img{
+  width: 100%;
+}
+
+.tours-slide__content {
+  display: grid;
+  align-items: end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  color: $white-color;
+  background: transparent;
+  padding: 30px 20px;
+  z-index: 2;
+}
+
+.tours-slide__details p:first-child {
+  @include font(300, 12px, 12px);
+  margin-bottom: 7px;
+}
+
+.tours-slide__stats,
+.tours-slide__details {
+  @include flex(row, space-between, center, wrap);
+
+  p {
+    margin: 0;
+  }
+}
+
+.tours-slide__stats {
+  margin-bottom: 15px;
+}
+
+.tours-slide__stats p{
+  @include font(500, 12px, 12px);
+  @include flex(row, space-between, center, wrap);
+}
+
+.tours-slide__stats p::before {
+  content: "";
+  display: block;
+  margin-right: 16px;
+  background: $white-color;
+  width: 20px;
+  height: 20px;
+
+  @include mask-image("../../__spritemap#sprite-sun-view",contain,no-repeat, left);
+}
+
+.tours-slide__stats p:last-child::before {
+  width: 16px;
+  height: 16px;
+
+  @include mask-image("../../__spritemap#sprite-moon-view",contain,no-repeat, left);
+}
+
+.tours-slide img{
+  object-fit: cover;
+}
+
+.tours-slide__content h3 {
+  @include font(700, 24px, 28px);
+  margin-bottom: 31px;
+  color: $white-color;
+}
+
+
+.tours-slide__button {
+  @include flex(row, space-between, center, wrap);
+  @include font(500, 12px, 12px);
+  //max-width: min-content;
+  padding: 8px 12px 8px 16px;
+}
+
+.tours-slide__button::before {
+  content: "";
+  width: 9px;
+  height: 12px;
+  display: block;
+  margin-right: 6px;
+  background: $white-color;
+  @include mask-image("../../__spritemap#sprite-pin-view",contain,no-repeat, left);
+}
+
+.tours-slide__details-complex {
+  ul {
+    @include list-reset();
+    @include flex(row, flex-start, center, wrap);
+  }
+}
+
+
+

@@ -16,11 +16,6 @@ body {
   color: $primary-color;
   background-color: $white-color;
   position: relative;
-  --swiper-pagination-color: #FFBA08;
-  --swiper-pagination-bullet-inactive-color: #999999;
-  --swiper-pagination-bullet-inactive-opacity: 1;
-  --swiper-pagination-bullet-size: 16px;
-  --swiper-pagination-bullet-horizontal-gap: 6px;
 }
 
 *,
@@ -67,15 +62,18 @@ img {
 .container {
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.section h2 {
+.section  h2:first-of-type {
   @include font(800, 22px, 22px);
   color: $primary-color;
   position: relative;
 }
 
-.section h2::before {
+.section  h2:first-of-type::before {
   @include font(800, 26px, 26px);
   color: $primary-color;
   opacity: 0.3;
@@ -83,4 +81,12 @@ img {
   left: 0;
 }
 
+.tours-training-wrapper {
+  background-size: cover;
+  background-position: right;
 
+  background-image: image-set(
+      url('../../img/tours_background@1x.png') 1x,
+      url('../../img/tours_background@2x.png') 2x
+  );
+}
