@@ -1,0 +1,109 @@
+.training {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $primary-color;
+
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.training h2 {
+  margin-bottom: 37px;
+}
+
+.training h2::before {
+  @include before-title-section("Обучение", -14px);
+}
+
+.training p {
+  @include font(400, 16px 24px);
+  margin-bottom: 56px;
+}
+
+.training__instructors {
+  position: relative;
+}
+
+.training__instructors h3 {
+  @include font(800, 35px, 35px);
+  margin-bottom: 20px;
+}
+
+.training__slider {
+  margin-bottom: 53px;
+}
+
+.training__process h3 {
+  @include font(700, 21px, 21px);
+  margin-bottom: 23px;
+}
+
+.training__process-list {
+  @include list-reset();
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.training__process-list-item {
+  padding: 8px 10px;
+  border-bottom: 2px solid $secondary-color;
+  position: relative;
+
+  @include desktop {
+    flex-basis: 25%;
+  }
+}
+
+.training__process-list-item::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  z-index: 3;
+  background: $secondary-color;
+  border-radius: 50%;
+}
+
+.training__process-list-item p {
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.training__process-list-item p::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: block;
+  background: $primary-color;
+  grid-column: 1;
+  @include mask-image("../../__spritemap#sprite-pinonmap-view", contain, no-repeat, center);
+}
+
+.training__process-list-item:nth-child(2) p::before {
+  @include mask-image("../../__spritemap#sprite-boots-view", contain, no-repeat, center);
+}
+
+.training__process-list-item:nth-child(3) p::before {
+  @include mask-image("../../__spritemap#sprite-tree-view", contain, no-repeat, center);
+}
+
+.training__process-list-item:last-child p::before {
+  @include mask-image("../../__spritemap#sprite-mountain-view", contain, no-repeat, center);
+}
+
+

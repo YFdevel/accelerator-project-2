@@ -1,0 +1,53 @@
+.adv {
+  padding-top: 16px;
+  padding-bottom: 20px;
+  color: $primary-color;
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 76px;
+  }
+
+  @include desktop {
+    padding-top: 135px;
+    padding-bottom: 150px;
+  }
+}
+
+.adv h2 {
+  margin-bottom: 37px;
+}
+
+.adv h2::before {
+  @include before-title-section("Преимущества", -14px);
+}
+
+.adv__container {
+  position: relative;
+  overflow: visible;
+}
+
+.adv__slider-wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+
+  @include desktop {
+    margin-left: calc(-1 * (100vw - 100%) / 2);
+    margin-right: calc(-1 * (100vw - 100%) / 2);
+    width: 100vw;
+    max-width: none;
+  }
+}
+
+.adv__slider {
+  overflow: visible;
+}
+
+.adv .swiper-buttons {
+  position: absolute;
+  top: 100%;
+  bottom: 50px;
+  right: 50%;
+}
+

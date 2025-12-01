@@ -48,6 +48,93 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     }
   });
+  new Swiper('#swiper-training', {
+    modules: [Navigation, Pagination],
+    navigation: {
+      nextEl: '#swiper-button-next-training',
+      prevEl: '#swiper-button-prev-training',
+    },
+    pagination: {
+      el: '#swiper-pagination-training',
+      clickable: true,
+    },
+    mousewheel: true,
+    keyboard: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    observer: true,
+    observeParents: true,
+    centeredSlides: false,
+    resistance: false,
+    resistanceRatio: 0,
+    shortSwipes: false,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    }
+  });
+  new Swiper('#swiper-reviews', {
+    modules: [Navigation, Pagination],
+    navigation: {
+      nextEl: '#swiper-button-next-reviews',
+      prevEl: '#swiper-button-prev-reviews',
+    },
+    pagination: {
+      el: '#swiper-pagination-reviews',
+      clickable: true,
+    },
+    mousewheel: true,
+    keyboard: true,
+    slidesPerView: 1,
+    observer: true,
+    observeParents: true,
+    centeredSlides: false,
+    resistance: false,
+    resistanceRatio: 0,
+    shortSwipes: false,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1200: {
+        spaceBetween: 120,
+      },
+    }
+  });
+  new Swiper('#swiper-adv', {
+    modules: [Navigation, Pagination],
+    navigation: {
+      nextEl: '#swiper-button-next-adv',
+      prevEl: '#swiper-button-prev-adv',
+    },
+    pagination: {
+      el: '#swiper-pagination-adv',
+      clickable: true,
+    },
+    mousewheel: true,
+    keyboard: true,
+    observer: true,
+    observeParents: true,
+    centeredSlides: false,
+    resistance: false,
+    resistanceRatio: 0,
+    shortSwipes: false,
+    freeMode: true,
+    enabled: false,
+    slidesPerView: 'auto',
+    breakpoints: {
+      1200: {
+        slidesPerView: 3,
+        enabled: true,
+        spaceBetween: 80,
+      },
+    }
+  });
 });
 
 // Mobile Menu

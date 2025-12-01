@@ -1,0 +1,22 @@
+.training-slider__list {
+  @include list-reset();
+  @include flex(row, space-between, stretch, no-wrap);
+}
+
+.training-slider__list-item {
+  width: 100%;
+  margin: 0 auto;
+
+  @include tablet {
+    min-width: 213px;
+  }
+
+  @include desktop {
+    min-width: 285px;
+  }
+}
+
+.training-slider__list-item:not(:last-child) {
+  margin-right: 10px;
+}
+

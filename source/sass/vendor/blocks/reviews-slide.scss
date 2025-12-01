@@ -1,0 +1,44 @@
+.reviews .reviews-slide{
+  color: $primary-color;
+  padding: 20px;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+
+  @include tablet {
+    gap: 30px;
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.reviews-slide__image{
+  width: 100%;
+  //margin-bottom: 20px;
+}
+
+
+.reviews-slide__image img{
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+.reviews-slide h3 {
+  @include font(700, 12px, 12px);
+  margin: 0 0 8px;
+  text-align:  left;
+}
+
+.reviews-slide p:not(:last-child){
+  @include font(400, 12px, 18px);
+  margin: 0 0 15px;
+  max-width: 100%;
+}
+
+.reviews-slide p:last-child {
+  @include font(300, 12px, 12px);
+}
+
+
+
+

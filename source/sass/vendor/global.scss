@@ -67,14 +67,14 @@ img {
   margin-right: auto;
 }
 
-.section  h2:first-of-type {
-  @include font(800, 22px, 22px);
+.section  h2 {
+  @include font(800, 35px, 35px);
   color: $primary-color;
   position: relative;
 }
 
-.section  h2:first-of-type::before {
-  @include font(800, 26px, 26px);
+.section  h2::before {
+  @include font(800, 35px, 35px);
   color: $primary-color;
   opacity: 0.3;
   position: absolute;
@@ -83,10 +83,69 @@ img {
 
 .tours-training-wrapper {
   background-size: cover;
-  background-position: right;
+  background-position: bottom -80% right;
 
   background-image: image-set(
       url('../../img/tours_background@1x.png') 1x,
       url('../../img/tours_background@2x.png') 2x
   );
+}
+
+.swiper-buttons {
+  @include flex(row, flex-end, center, wrap);
+  position: absolute;
+  right: 20px;
+  top: 0;
+  z-index: 2;
+}
+
+//.section .swiper-button-disabled {
+//  opacity: 0.35;
+//}
+
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+  width: 37px;
+  height: 35px;
+  background-color: $btn-disabled-color;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.custom-swiper-button-next {
+  background-color: $secondary-color;
+  margin-left: 4px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  content: '' !important;
+  display: none;
+}
+
+.custom-swiper-button-prev::before,
+.custom-swiper-button-next::before {
+  @include flex(row, center, center, wrap);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: $white-color;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.custom-swiper-button-prev::before {
+  @include mask-image("../../__spritemap#sprite-prev-view",20px 5px,no-repeat, center);
+}
+
+.custom-swiper-button-next::before {
+  @include mask-image("../../__spritemap#sprite-next-view",20px 5px,no-repeat, center);
 }

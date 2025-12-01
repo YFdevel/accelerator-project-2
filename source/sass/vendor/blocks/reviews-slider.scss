@@ -1,0 +1,28 @@
+.reviews-slider__list {
+  padding: 0;
+  margin: 0;
+}
+
+
+.reviews-slider__list-item {
+  width: 100%;
+  //flex-grow: 1;
+  box-shadow: 0 0 20px 0 $card-box-shadow-opacity-color;
+  //width: calc(100% - 15px);
+  margin: 0 auto;
+
+  @include tablet {
+    min-width: 565px;
+    max-width: 700px;
+    margin: 0;
+  }
+}
+
+.reviews-slider__list-item:not(:last-child) {
+  @include tablet {
+    margin-right: 30px;
+  }
+  @include desktop {
+    margin-right: 120px;
+  }
+}

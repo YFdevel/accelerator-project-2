@@ -1,0 +1,84 @@
+.about {
+  color: $primary-color;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  //grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: stretch;
+  grid-template-areas: "overlap";
+
+  //@include tablet {
+  //  grid-template-columns: repeat(2, 1fr);
+  //}
+}
+
+.about dl,
+.about dt,
+.about dd {
+  margin: 0;
+  padding: 0;
+}
+
+.about img {
+  object-fit: cover;
+  object-position: left;
+}
+
+.about h2 {
+@include font(800, 35px, 35px);
+  margin: 0 0 57px;
+}
+
+.about h3 {
+  @include font(700, 21px, 21px);
+  margin: 0 0 20px;
+}
+
+.about p {
+  @include font(400, 14px, 22px);
+}
+
+.about p:not(:last-of-type) {
+  margin: 0 0 25px;
+}
+
+.about__image {
+  width: 100%;
+  min-height: 400px;
+  background-size: 100%;
+  background-position: center left;
+  background-repeat: no-repeat;
+
+  background-image: image-set(
+      url('../../../img/about@1x.png') 1x,
+      url('../../../img/about@2x.png') 2x
+  );
+
+  @include tablet {
+    grid-area: overlap;
+    background-size: 60% 65%;
+  }
+
+  @include desktop {
+    background-size: 55% 85%;
+  }
+}
+
+.about__container {
+  width: 100%;
+  background: transparent;
+  @include tablet {
+    grid-area: overlap;
+    @include flex(row, flex-end, stretch, wrap);
+  }
+}
+
+.about__content {
+  @include tablet {
+    max-width: 36%;
+  }
+  @include desktop {
+    max-width: 40%;
+  }
+}

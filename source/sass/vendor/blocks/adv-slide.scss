@@ -1,0 +1,40 @@
+.adv .reviews-slide{
+  color: $primary-color;
+  padding: 20px;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+
+  @include tablet {
+    gap: 30px;
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.adv-slide__content {
+  padding: 20px 10px;
+}
+
+.adv-slide__image{
+  @include flex(row, center, center, wrap);
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 20px;
+  border: 1px solid $secondary-color;
+}
+
+.reviews-slide h3 {
+  @include font(600, 14px, 14px);
+  margin: 0 0 15px;
+}
+
+.adv-slide p {
+  @include font(400, 12px, 18px);
+  margin: 0;
+  max-width: 100%;
+}
+
+
+
+
+

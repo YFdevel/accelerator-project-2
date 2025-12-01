@@ -1,5 +1,8 @@
 .hero__slider-list,
-.tours__slider-list, {
+.tours__slider-list,
+.training-slider__list,
+.reviews__slider-list {
   @include list-reset();
+  @include flex(row, space-between, stretch, nowrap);
   position: relative;
 }

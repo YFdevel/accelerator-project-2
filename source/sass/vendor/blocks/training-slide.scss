@@ -1,0 +1,53 @@
+.training-slide{
+  color: $primary-color;
+  padding: 15px;
+  border: 1px solid $secondary-color-opacity;
+  background: $white-color;
+
+  //@include desktop {
+  //  max-width: 285px;
+  //  min-height: 356px;
+  //}
+}
+
+.training-slide__image{
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+
+.training-slide__image img{
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+.training-slide h3 {
+  @include font(700, 14px, 16px);
+  margin: 0;
+  text-align:  left;
+}
+
+.training-slide p{
+  @include font(400, 12px, 16px);
+  margin: 0;
+  max-width: 100%;
+}
+
+.training-slide__personal {
+  @include flex(row, space-between, center, wrap);
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+.training-slide__personal-vk {
+  @include flex(row, center, center, wrap);
+  width: 24px;
+  height: 24px;
+  border: 1px solid $primary-color-opacity;
+}
+
+
+
+
+

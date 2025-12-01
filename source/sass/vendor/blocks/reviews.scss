@@ -1,0 +1,50 @@
+.reviews {
+  padding-top: 16px;
+  padding-bottom: 20px;
+  color: $primary-color;
+
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  @include desktop {
+    padding-top: 145px;
+    padding-bottom: 77px;
+  }
+}
+
+.reviews h2 {
+  margin-bottom: 28px;
+}
+
+.reviews h2::before {
+  @include before-title-section("Отзывы", -14px);
+}
+
+.reviews__container {
+  position: relative;
+  overflow: visible;
+}
+
+.reviews__slider-wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+
+  @include tablet {
+    margin: 0;
+    max-width: none;
+    width: calc(100% + (100vw - 100%) / 2);
+    transform: translateX(-15px);
+  }
+
+  @include desktop {
+    transform: translateX(-15px);
+  }
+}
+
+.reviews__slider {
+  overflow: visible;
+}
+
