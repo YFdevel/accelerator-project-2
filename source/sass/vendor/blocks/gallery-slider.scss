@@ -1,0 +1,26 @@
+.gallery-slider {
+  width: 100%;
+}
+
+.gallery-slider__list {
+  padding: 0;
+  margin: 0;
+  min-height: 623px;
+
+  @include flex(row, flex-start, stretch, nowrap);
+}
+
+
+.gallery-slider__list-item {
+  width: 100%;
+  @include tablet {
+    max-width: 260px;
+  }
+  @include desktop {
+    max-width: 284px;
+  }
+}
+
+.gallery-slider__list-item:not(:last-child) {
+  margin-right: 5px;
+}

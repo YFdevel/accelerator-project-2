@@ -68,9 +68,19 @@ img {
 }
 
 .section  h2 {
-  @include font(800, 35px, 35px);
+  @include font(800, 22px, 22px);
   color: $primary-color;
   position: relative;
+
+  @include tablet {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @include desktop {
+    font-size: 35px;
+    line-height: 35px;
+  }
 }
 
 .section  h2::before {

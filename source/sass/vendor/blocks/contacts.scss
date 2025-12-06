@@ -1,0 +1,111 @@
+.contacts {
+  padding-top: 36px;
+  padding-bottom: 20px;
+  color: $primary-color;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.contacts h2 {
+  margin: 0 0 12px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 26px;
+  }
+}
+
+.contacts p {
+  @include font(400, 14px, 20px);
+  margin: 0 0 30px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    margin-bottom: 50px;
+  }
+}
+
+.contacts__list {
+  @include list-reset();
+  margin: 0 0 30px;
+  display: grid;
+  gap: 30px;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr;
+    margin-bottom: 50px;
+    gap: 35px;
+  }
+}
+
+.contacts__list-item span {
+  @include font(600, 14px, 14px);
+  display: block;
+}
+
+.contacts__list-item a {
+  @include font(400, 14px, 20px);
+  @include link-reset($primary-color);
+  display: block;
+}
+
+.contacts__list-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "icon content";
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.contacts__list-item p {
+  margin: 0;
+}
+
+.contacts__list-item::before {
+  content: "";
+  grid-area: icon;
+  width: 20px;
+  height: 20px;
+  background: $primary-color;
+  grid-column: 1;
+  display: block;
+  justify-self: center;
+
+  @include mask-image("../../__spritemap#sprite-phone-view");
+}
+
+.contacts__list-item--email::before {
+  @include mask-image("../../__spritemap#sprite-mail-view");
+}
+
+.contacts__list-item--address::before {
+  @include mask-image("../../__spritemap#sprite-address-view");
+}
+
+.contacts__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+
+

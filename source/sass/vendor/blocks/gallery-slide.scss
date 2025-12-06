@@ -1,0 +1,15 @@
+.gallery-slide__image{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  gap: 5px;
+}
+
+.gallery-slide__image img {
+  object-fit: contain;
+}
+
+
+
+
+

@@ -135,6 +135,28 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     }
   });
+  new Swiper('#swiper-gallery', {
+    modules: [Navigation, Pagination],
+    navigation: {
+      nextEl: '#swiper-button-next-gallery',
+      prevEl: '#swiper-button-prev-gallery',
+    },
+    pagination: {
+      el: '#swiper-pagination-gallery',
+      clickable: true,
+    },
+    mousewheel: true,
+    keyboard: true,
+    slidesPerView: 1,
+    spaceBetween: 5,
+    observer: true,
+    observeParents: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+    }
+  });
 });
 
 // Mobile Menu

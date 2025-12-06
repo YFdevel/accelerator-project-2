@@ -1,0 +1,108 @@
+.form {
+  padding-top: 174px;
+  padding-bottom: 174px;
+  color: $white-color;
+  background-color: $btn-disabled-color;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-image: image-set(
+      url('../../../img/form_mobile@1x.png') 1x,
+      url('../../../img/form_mobile@2x.png') 2x
+  );
+
+  @include tablet {
+    padding-top: 183px;
+    padding-bottom: 183px;
+    background-image: image-set(
+        url('../../../img/form_tablet@1x.png') 1x,
+        url('../../../img/form_tablet@2x.png') 2x
+    );
+  }
+
+  @include desktop {
+    padding-top: 292px;
+    padding-bottom: 292px;
+    background-image: image-set(
+        url('../../../img/form_desktop@1x.png') 1x,
+        url('../../../img/form_desktop@2x.png') 2x
+    );
+  }
+}
+
+.form h2 {
+  margin: 0 0 20px;
+
+  @include tablet {
+    margin-bottom: 25px;
+  }
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
+}
+
+.form p {
+  margin: 0 0 20px;
+
+  @include tablet {
+    margin-bottom: 25px;
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.form__self {
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 360px;
+  }
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    width: 65%;
+    max-width: none;
+    height: 56px;
+  }
+}
+
+.form__input {
+  @include font(400, 16px, 16px);
+  display: block;
+  margin: 0 auto 8px;
+  width: 100%;
+  padding: 15px 20px 15px 17px;
+
+  @include tablet {
+    max-width: 360px;
+  }
+
+  @include desktop {
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+.form__button {
+  @include font(500, 16px, 16px);
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 21px 19px;
+
+  @include tablet {
+    max-width: 360px;
+  }
+
+  @include desktop {
+    margin: 0;
+    padding: 20px;
+  }
+}
+
