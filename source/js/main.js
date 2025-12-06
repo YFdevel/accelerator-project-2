@@ -169,4 +169,3 @@ document.addEventListener('DOMContentLoaded', () => {
     nav.classList.toggle('active');
   });
 });
-

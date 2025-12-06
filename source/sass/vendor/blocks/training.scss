@@ -105,5 +105,3 @@
 .training__process-list-item:last-child p::before {
   @include mask-image("../../__spritemap#sprite-mountain-view", contain, no-repeat, center);
 }
-
-

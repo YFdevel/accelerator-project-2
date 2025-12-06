@@ -21,6 +21,7 @@
 }
 
 .hero-slide img{
+  width: 100%;
   object-fit: cover;
 }
 
@@ -32,4 +33,36 @@
   margin-bottom: 60px;
 }
 
+.hero__stats {
+  display: none;
 
+  @include desktop {
+    @include flex(row, flex-start, center, wrap);
+    margin-top: 134px;
+  }
+}
+
+.hero__stats p{
+  @include font(400, 12px, 16px);
+  @include flex(row, space-between, center, wrap);
+  margin: 0;
+}
+
+.hero__stats p:first-child {
+  margin-right: 10px;
+}
+
+.hero__stats p::before {
+  content: "";
+  display: block;
+  margin-right: 8px;
+  background: $white-color;
+  width: 11px;
+  height: 11px;
+
+  @include mask-image("../../__spritemap#sprite-moon-view",contain,no-repeat, left);
+}
+
+.hero__stats p:last-child::before {
+  @include mask-image("../../__spritemap#sprite-level-view",contain,no-repeat, left);
+}
